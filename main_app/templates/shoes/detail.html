@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Shoe Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ shoe.name }}</span>
+    <p>Maker: {{ shoe.maker }}</p>
+    <p>Color: {{ shoe.color }}</p>
+    <p>Release Year: {{ shoe.release_year }}</p>
+    <p>Price: {{ shoe.price }}</p>
+  </div>
+  <div class="card-action">
+    <a href="{% url 'shoes_update' shoe.id %}">Edit</a>
+    <a href="{% url 'shoes_delete' shoe.id %}">Delete</a>
+  </div>
+</div>
+
+{% endblock %}
