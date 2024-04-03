@@ -14,4 +14,5 @@ urlpatterns = [
     path('shoes/<int:pk>/update/', views.ShoeUpdate.as_view(), name='shoes_update'),
     # shoes/:id/delete
     path('shoes/<int:pk>/delete/', views.ShoeDelete.as_view(), name='shoes_delete'),
+    path('shoes/<int:shoe_id>/add_history/', views.add_history, name='add_history'),
 ]
